@@ -1,0 +1,74 @@
+region: huawei_mobile
+device_model: compute_node
+
+config:
+ - ip: 172.31.6.112-172.31.6.113,172.31.4.128
+   vendor: huawei
+   model: S999
+   SnmpVersion: 
+      version: 2
+      community: public
+   metric:
+      - key: ssCpuIdle
+        oid: .1.3.6.1.4.1.2021.11.11.0
+        method: GET
+      - key: memAvailReal
+        oid: .1.3.6.1.4.1.2021.4.6.0
+        method: GET
+      - key: memBuffer
+        oid: .1.3.6.1.4.1.2021.4.14.0
+        method: GET
+      - key: memCached
+        oid: .1.3.6.1.4.1.2021.4.15.0
+        method: GET
+      - key: memTotalFree
+        oid: .1.3.6.1.4.1.2021.4.11.0
+        method: GET
+      - key: memTotalReal
+        oid: .1.3.6.1.4.1.2021.4.5.0
+        method: GET
+      - key: cpuLoad5
+        oid: .1.3.6.1.4.1.2021.10.1.3.1
+        method: GET
+      - key: cpuLoad10
+        oid: .1.3.6.1.4.1.2021.10.1.3.2
+        method: GET
+      - key: Processers
+        oid: .1.3.6.1.2.1.25.3.3.1.2
+        method: WALK
+ - ip: 172.31.6.112-172.31.6.113,172.31.4.128
+   vendor: h3c
+   model: c777
+   SnmpVersion: 
+      version: 3
+      SecLevel: authPriv
+      SecName: snmpuser
+      PrivPass: password
+      AuthPass: password
+      community: public
+   metric:
+      - key: Processers
+        oid: .1.3.6.1.2.1.25.3.3.1.2
+        method: WALK
+      - key: IfInOctet
+        oid: .1.3.6.1.2.1.2.2.1.10
+        method: WALK
+      - key: IfOutOctet
+        oid: .1.3.6.1.2.1.2.2.1.16
+        method: WALK
+      - key: ifHighSpeed
+        oid: .1.3.6.1.2.1.31.1.1.1.15
+        method: WALK       
+      - key: cpuIdleRatio
+        oid: .1.3.6.1.4.1.2021.11.11.0
+        method: GET
+      - key: diskIOLA5
+        oid: UCD-DISKIO-MIB::diskIOLA5
+        method: WALK
+      - key: hrStorageSize
+        oid: .1.3.6.1.2.1.25.2.3.1.5
+        method: WALK
+      - key: hrDiskStorageCapacity
+        oid: HOST-RESOURCES-MIB::hrDiskStorageCapacity
+        method: WALK
+

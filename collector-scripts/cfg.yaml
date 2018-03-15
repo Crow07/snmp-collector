@@ -1,0 +1,56 @@
+region: huawei_mobile
+device_model: compute_node
+
+config:
+ - ip: 172.31.6.112-172.31.6.113,172.31.4.128
+   vendor: huawei
+   model: S999
+   test: 
+     test1: 1
+     test2: 2
+   metric:
+      - key: cpuIdleRatio
+        oid: .1.3.6.1.4.1.2021.11.11.0
+      - key: memAvailReal
+        oid: .1.3.6.1.4.1.2021.4.6.0
+      - key: memBuffer
+        oid: .1.3.6.1.4.1.2021.4.14.0
+      - key: memCached
+        oid: .1.3.6.1.4.1.2021.4.15.0
+      - key: memTotalFree
+        oid: .1.3.6.1.4.1.2021.4.11.0
+      - key: memTotalReal
+        oid: .1.3.6.1.4.1.2021.4.5.0
+      - key: cpuLoad5
+        oid: .1.3.6.1.4.1.2021.10.1.3.1
+      - key: cpuLoad10
+        oid: .1.3.6.1.4.1.2021.10.1.3.2
+      - key: cpuLoad15
+        oid: .1.3.6.1.4.1.2021.10.1.3.3
+ - ip: 172.31.6.112-172.31.6.113,172.31.4.128
+   vendor: h3c
+   model: c777
+   test:
+     test1: 1
+     test2: 2
+   metric:
+      - key: ifNumber
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: sysName
+        oid: .1.3.6.1.2.1.1.5.0
+      - key: test_scripts1
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts7
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts6
+        oid: .1.3.6.1.2.1.2.1.0    
+      - key: test_scripts5
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts4
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts3
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts8
+        oid: .1.3.6.1.2.1.2.1.0
+      - key: test_scripts2
+        oid: .1.3.6.1.2.1.2.1.0
